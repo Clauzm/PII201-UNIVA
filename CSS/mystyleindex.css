@@ -1,0 +1,22 @@
+section{
+    text-align: center;
+    font-family: monospace;
+    border: 1px solid black;
+    color: black;
+    background-color: aliceblue;
+}
+
+section:hover{
+        text-align: center;
+        font-family: monospace;
+        border: 1px solid black;
+        color: red;
+        background-color: black;
+
+        
+}
+
+section > article > a{
+    color: #3FFF33;
+    font-size: 20px;
+}
