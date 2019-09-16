@@ -3,7 +3,12 @@ section{
     font-family: monospace;
     border: 1px solid black;
     color: black;
-    background-color: aliceblue;
+    background-color: aliceblue;     
+
+    position: fixed;
+        left: 450.5px;
+        right: 450.5px;
+        top: 75px;
 }
 
 section:hover{
@@ -11,12 +16,20 @@ section:hover{
         font-family: monospace;
         border: 1px solid black;
         color: red;
-        background-color: black;
-
-        
+        background-color: rgb(219, 219, 219);  
+        background-image: url(..//img/calavera.png);
+        background-position: center;
+        background-repeat: no-repeat; 
+       
 }
 
-section > article > a{
-    color: #3FFF33;
-    font-size: 20px;
+section > div > img.contenedor:hover{
+        opacity: 0;            
+}
+
+
+
+section > article > a:hover{
+    color: yellow;
+    font-size: 25px;
 }
