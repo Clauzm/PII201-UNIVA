@@ -1,0 +1,112 @@
+hr{
+    border-color: brown;
+    border-width: 0.5px;  
+}
+
+section > div > p{
+    top: 10px;
+}
+
+
+.top-bar{
+    margin-top: 7px;
+    padding-left: 7px;
+    width: 100%; 
+}
+
+.top-bar > hr{
+    border-color: brown;
+    border-width: 0.5px;
+}
+
+nav > div > hr{
+    border-color: brown;
+    border-width: 0.5px;
+}
+
+.navlist li
+{    
+    display: inline;
+    border-top: 19px;
+    font-family: monospace;
+    font-size: 19px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 3px;
+    padding-bottom: 3px;    
+    margin-left: 85px;
+    margin-right: 85px;
+}
+
+.navlist > ul > li:hover{
+    background-color: rgb(240, 240, 240);
+    border-radius: 60px;     
+}
+
+.navlist > ul > li > a{
+    color: black;
+}
+
+.navlist > ul > li > a:hover{
+    color: palevioletred;
+}
+
+article > p {
+    margin-top: 64x;
+    margin-left: 90px;
+    margin-right: 700px;
+    margin-bottom: 30px;
+    text-align: left;
+    font-family: monospace;
+    font-size: 39px;
+}
+
+
+article > hr{
+    border-color: brown;
+    border-width: 0.5px;
+}
+
+
+article > div > img:hover{
+    border-radius: 90%;
+}
+
+body > hr{
+    border-color: brown;
+    border-width: 0.5px;
+}
+
+footer > h5{
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding-left: 1175px;
+    
+}
+
+footer > hr {
+    border-color: brown;
+    border-width: 0.5px;
+}
+
+article > h1{
+    text-align: left;
+    color: black;
+    padding-left: 65px;
+    
+}
+
+table{
+    font-family: 'Courier New', Courier, monospace;
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+th, td{
+    border: 0.5px solid  brown; 
+    text-align: center;
+    padding: 8px;
+}
+
