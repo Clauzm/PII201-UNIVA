@@ -1,0 +1,14 @@
+.titulo{
+    padding-left: 10px;
+}
+
+.subtitulo{
+    padding-left: 10px;
+}
+
+body > hr{
+    border-color: brown;
+    border-width: 0.5px;
+}
+
+
