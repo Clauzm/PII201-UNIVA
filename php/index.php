@@ -8,6 +8,8 @@
     *lineas
     */
 
-    echo "This is PHP code";
+    echo "Primera leccion php";
+    echo "<br><br>";
+    echo "<a href = ../php/form_insert_users.php> Insert Users </a>";
 
 ?>

@@ -53,25 +53,9 @@ nav > div > hr{
     color: palevioletred;
 }
 
-article > p {
-    margin-top: 64x;
-    margin-left: 90px;
-    margin-right: 700px;
-    margin-bottom: 30px;
-    text-align: left;
-    font-family: monospace;
-    font-size: 39px;
-}
-
-
 article > hr{
     border-color: brown;
     border-width: 0.5px;
-}
-
-
-article > div > img:hover{
-    border-radius: 90%;
 }
 
 body > hr{
@@ -140,7 +124,7 @@ textarea {
 }
 
 .button {
-     padding-left: 90px;
+     padding-left: 170px;
 }
 
 button {
