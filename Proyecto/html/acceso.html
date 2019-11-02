@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../CSS/accesostyle.css">
+    <title>Document</title>
+</head>
+<body>
+    <hr/>            
+      <header>              
+        <section>                
+            <tr>
+                <td><img src="../img/cafeMexico.png" alt="Cafe Mexico"></td>
+                <td><h1 style="display:inline; margin-left: 130px;">El verdadero sabor del café</h1></td>                                                             
+        </section>                   
+      </header> 
+    <hr/>  
+    <h1>¡Bienvenido!</h1>
+    <h2>Escriba sus credenciales para ingresar.</h2>
+    <form action="../php/controlacceso.php" method="get">        
+       <input type="text" name="nombreusuario" placeholder="nombre">
+       <br><br>    
+       <input type="password" name="contrasenausuario" placeholder="contraseña">
+       <br><br> 
+       <div class="boton">
+       <input type="submit" value="Entrar">  
+       </div>     
+    </form>
+</body>
+</html>
