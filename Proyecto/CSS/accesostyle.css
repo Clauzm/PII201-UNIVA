@@ -1,5 +1,5 @@
 
-body > hr{
+hr{
     border-color: brown;
     border-width: 0.5px;
 }
@@ -15,10 +15,82 @@ h2{
 
 form{
     padding-top: 50px;
-    padding-left: 592px;
+    padding-left: 600px;
 }
 
 form > div.boton{
     padding-top: 10px;
     padding-left: 60px;
+}
+
+nav > div > hr{
+    border-color: brown;
+    border-width: 0.5px;
+}
+
+
+
+.navlist li
+{    
+    display: inline;
+    border-top: 19px;
+    font-family: monospace;
+    font-size: 19px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;    
+    margin-left: 40px;
+    margin-right: 85px;
+}
+
+.navlist > ul > li:hover{
+    background-color: rgb(240, 240, 240);
+    border-radius: 60px;     
+}
+
+.navlist > ul > li > a{
+    color: black;
+}
+
+.navlist > ul > li > a:hover{
+    color: palevioletred;
+}
+
+article > p {
+    margin-top: 64x;
+    margin-left: 90px;
+    margin-right: 700px;
+    margin-bottom: 30px;
+    text-align: left;
+    font-family: monospace;
+    font-size: 39px;
+}
+
+
+article > hr{
+    border-color: brown;
+    border-width: 0.5px;
+}
+
+
+article > div > img:hover{
+    border-radius: 90%;
+}
+
+body > hr{
+    border-color: brown;
+    border-width: 0.5px;
+}
+
+footer > h5{
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding-left: 1175px;
+    
+}
+
+footer > hr {
+    border-color: brown;
+    border-width: 0.5px;
 }

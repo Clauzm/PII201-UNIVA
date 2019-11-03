@@ -24,6 +24,13 @@ nav > div > hr{
     border-width: 0.5px;
 }
 
+nav > div > hr{
+    border-color: brown;
+    border-width: 0.5px;
+}
+
+
+
 .navlist li
 {    
     display: inline;
@@ -34,8 +41,8 @@ nav > div > hr{
     padding-left: 5px;
     padding-top: 3px;
     padding-bottom: 3px;    
-    margin-left: 65px;
-    margin-right: 85px;
+    margin-left: 40px;
+    margin-right: 80px;
 }
 
 .navlist > ul > li:hover{

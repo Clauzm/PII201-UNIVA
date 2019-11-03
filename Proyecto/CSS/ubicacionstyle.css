@@ -25,6 +25,12 @@ nav > div > hr{
 }
 
 
+nav > div > hr{
+    border-color: brown;
+    border-width: 0.5px;
+}
+
+
 
 .navlist li
 {    
@@ -36,8 +42,8 @@ nav > div > hr{
     padding-left: 5px;
     padding-top: 3px;
     padding-bottom: 3px;    
-    margin-left: 65px;
-    margin-right: 85px;
+    margin-left: 40px;
+    margin-right: 80px;
 }
 
 .navlist > ul > li:hover{
@@ -52,6 +58,7 @@ nav > div > hr{
 .navlist > ul > li > a:hover{
     color: palevioletred;
 }
+
 
 article > div > img{
     padding-left: 350px;

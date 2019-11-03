@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../CSS/controlaccesostyle.css">
-    <title>Document</title>
+    <title>Inicio de sesión | Administrador | Café México</title>
 </head>
 <body>
     <hr/>            
@@ -19,8 +19,8 @@
     <hr/> 
     <?php 
 
-    $usuario = $_GET['nombreusuario'];
-    $contrasena = $_GET['contrasenausuario'];
+    $correo = $_GET['correo'];
+    $contrasena = $_GET['password'];
     $estatus = "activo";
 
     $server = "localhost";
@@ -39,18 +39,24 @@
         if (mysqli_num_rows($result) > 0) {
             while($row = mysqli_fetch_assoc($result)){
                 //echo $row['username']."+".$row['userpassword'];
-                if ($usuario == 'claudia' && $contrasena == 'claudia' && $estatus == 'activo') {
+                if ($correo == $row['correo'] && $contrasena == $row['password']) {
+                    echo "<a href='acciones.php'></a>";
                     echo '<div class="titulo"><h1>Bienvenido administrador</h1></div>';
                     echo '<div class="subtitulo"><h3>Ir a la página dónde quieres realizar cambios, selecciona una tarjeta 
                     te llevará ahí para que puedas generar las acciones.</h3></div>';               
-                    echo '<table>
+                    echo "<table>
                           <tr>
-                            <td><a href=../inicio.html>Inicio</a></td>
-                          </tr>';
+                            <th><h2>Inicio</th>                           
+                          </tr>
+                          <tr>
+                            <td><a href = '../html/formularioinicio.html'</a> 
+                            <img src='../img/inicioIndex.jpg' alt='Inicio'></td>
+                          </tr>";
                     break;
                 } else {
                 //echo "UPS! Error 002, you are not registered";
                 echo "no conectado";
+                echo "<a href='../html/login.html'><br><h3>Regresar</h3></a>";
                 break;
                 }                
             }
