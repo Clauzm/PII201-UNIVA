@@ -20,8 +20,7 @@
     <?php 
 
     $correo = $_GET['correo'];
-    $contrasena = $_GET['password'];
-    $estatus = "activo";
+    $contrasena = $_GET['pass'];
 
     $server = "localhost";
     $username = "root";
@@ -39,18 +38,30 @@
         if (mysqli_num_rows($result) > 0) {
             while($row = mysqli_fetch_assoc($result)){
                 //echo $row['username']."+".$row['userpassword'];
-                if ($correo == $row['correo'] && $contrasena == $row['password']) {
+                if ($correo == $row['correo'] && $contrasena == $row['pass']) {
                     echo "<a href='acciones.php'></a>";
                     echo '<div class="titulo"><h1>Bienvenido administrador</h1></div>';
                     echo '<div class="subtitulo"><h3>Ir a la página dónde quieres realizar cambios, selecciona una tarjeta 
                     te llevará ahí para que puedas generar las acciones.</h3></div>';               
                     echo "<table>
                           <tr>
-                            <th><h2>Inicio</th>                           
+                            <th><h2>Usuarios</th>                           
+                            <th><h2>Inicio</th>
+                            <th><h2>Productos</th>
+                            <th><h2>Nosotros</th>
+                            <th><h2>Ubicación</th>
                           </tr>
                           <tr>
-                            <td><a href = '../html/formularioinicio.html'</a> 
+                            <td><a href = 'adminusuario.php'</a> 
+                            <img src='../img/usuario.png' alt='Usuarios'></td>
+                            <td><a href = 'admininicio.php'</a> 
                             <img src='../img/inicioIndex.jpg' alt='Inicio'></td>
+                            <td><a href = 'adminproductos.php'</a> 
+                            <img src='../img/productos.png' alt='Productos'></td>
+                            <td><a href = 'adminnosotros.php'</a> 
+                            <img src='../img/nosotros.png' alt='Nosotros'></td>
+                            <td><a href = 'adminubicacion.php'</a> 
+                            <img src='../img/ubicacion.png' alt='Ubicación'></td>
                           </tr>";
                     break;
                 } else {

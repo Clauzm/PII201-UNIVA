@@ -41,3 +41,12 @@ nav > div > hr{
 .navlist > ul > li > a:hover{
     color: palevioletred;
 }
+
+table{
+    font-family: 'Courier New', Courier, monospace;
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-left: 10px;
+    padding-left: 30px;
+    margin-top: 50px;
+}

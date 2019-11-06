@@ -18,14 +18,13 @@
           </section>                   
      </header>  
       <hr/>
-      <hr/>  
       <nav>         
           <div class="navlist">
           <ul>
           <li style="display:inline;"><a href="../inicio.html">Inicio</a></li>
           <li style="display:inline;"><a href="productos.html">Productos</a></li>
           <li style="display:inline;"><a href="nosotros.html">Nosotros</a></li>          
-          <li style="display:inline;"><a href="ubicacion.html">Ubicación</a></li>
+          <li style="display:inline;"><a href="ubicacion.php">Ubicación</a></li>
           <li style="display:inline;"><a href="contacto.html">Contacto</a></li>
           <li style="display:inline;"><a href="login.html">Login</a></li>
           </ul>
