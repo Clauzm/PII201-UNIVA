@@ -24,8 +24,7 @@
           <tr>
             <th>Id</th>                                      
             <th>texto1</th>
-            <th>texto2</th>  
-            <th>imagenubicacion</th>           
+            <th>texto2</th>           
             <th>Editar</th>
           </tr>          
 
@@ -41,7 +40,6 @@
             $id = $fila['idubicacion'];
             $texto1 = $fila['texto1'];
             $texto2 = $fila['texto2'];
-            $imagenubicacion = $fila['imagenubicacion'];
 
             $i++;
     ?>
@@ -50,7 +48,6 @@
             <td><?php echo $id; ?></td>
             <td><?php echo $texto1; ?></td>
             <td><?php echo $texto2; ?></td>
-            <td><?php echo $imagenubicacion; ?></td>
             <td><a href="adminubicacion.php?editar=<?php echo $id;?>">Editar</a></td>
 
     <?php } ?>
@@ -70,21 +67,21 @@
 			
         $texto1 = $fila['texto1']; 
         $texto2 = $fila['texto2'];  
-        $imagenubicacion =  $fila['imagenubicacion'];      
     
         }
 ?>
 
 <br>
 
-<form method="post" action="">
-        <h3>texto 1</h3>
-        <textarea name="texto1" id="" cols="70" rows="10" value="<?php echo $texto1;?>"></textarea><br><br>
-        <h3>texto 2</h3>
-        <textarea name="texto2" id="" cols="70" rows="10" value="<?php echo $texto2;?>"></textarea><br><br>
-		<input type="submit" name="actualizar" value="ACTUALIZAR DATOS"/>
-	
-</form>
+    <form method="POST" action="">
+            <h3>texto 1</h3>
+            <textarea name="texto1" id="" cols="70" rows="10" value="<?php echo $texto1;?>"></textarea><br><br>
+            <h3>texto 2</h3>
+            <textarea name="texto2" id="" cols="70" rows="10" value="<?php echo $texto2;?>"></textarea><br><br>
+            <input type="submit" name="actualizar" value="ACTUALIZAR DATOS"/>
+        
+    </form>
+
 	<?php 
 	if(isset($_POST['actualizar'])){
 	

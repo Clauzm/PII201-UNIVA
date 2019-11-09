@@ -32,11 +32,34 @@
       </div> 
         </div>
         <article>
+
+        <?php 
+
+            if(isset($_GET['editar'])){
+            include("adminubicacion.php");
+            }
+
+            if(isset($_GET['editar'])){
+                        
+            $editar_id = $_GET['editar']; 
+
+            $consulta = "SELECT * FROM ubicacion WHERE idubicacion='$editar_id'";
+            $ejecutar = mysqli_query($connection, $consulta); 
+
+            $fila=mysqli_fetch_array($ejecutar);
+                
+            $texto1 = $fila['texto1']; 
+            $texto2 = $fila['texto2'];  
+
+            }
+            ?>
+             
             <div><img src="../img/mapaUbicacion.png"/></div>
-            <p>Bélgica 778, Colonia Moderna, Guadalajara, Jalisco. México. CP: 44190</p>
-            <p style = "padding-left: 350px;">Teléfonos: (33) 36-29-66-78 y (33) 36-79-09-85</p>
-         <hr/> 
-         </article> 
+            <p><?php echo $texto1;?></p>
+            <p><?php echo $texto2;?></p> 
+
+         <hr/>  
+        </article> 
          <footer>
             <h5>2019 &COPY; Clauzm/Developer.</h5>
             <hr/> 

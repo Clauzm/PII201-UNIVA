@@ -98,6 +98,7 @@
     ?>
 
     <?php 
+    
         if(isset($_GET['borrar'])){
         
         $borrar_id = $_GET['borrar'];
@@ -106,14 +107,14 @@
         
         $ejecutar = mysqli_query($connection,$borrar); 
             
-            if($ejecutar){            
+        if($ejecutar){            
             echo "<script>alert('El usuario ha sido borrado!')</script>";
             echo "<script>window.open('adminusuario.php','_self')</script>";
-            }
-        
         }
         
-        ?>
+    }
+        
+    ?>
 
 </body>
 </html>
