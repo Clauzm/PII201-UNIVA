@@ -17,6 +17,7 @@
             </section>                   
         </header> 
     <hr/> 
+    
     <?php 
 
     $correo = $_GET['correo'];

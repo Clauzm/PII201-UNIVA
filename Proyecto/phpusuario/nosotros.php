@@ -1,11 +1,21 @@
-<!DOCTYPE html>
-<html>
-  <head>
+<?php 
+require_once "../clases/Nosotros.php";
+require "../clases/Consulta.php";
+
+$nosotros = new Nosotros;
+$consulta = new Consulta;
+$query = "select * from nosotros;";
+$nosotros = $consulta -> getNosotros($query);
+
+?>
+
+<!DOCTYPE hmtl>
+<head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Café México - Jalisco, México.</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="stylesheet" href="../CSS/fomulariostyle.css">
+    <link rel="stylesheet" href="../CSS/nosotrostyle.css">
     <script src='main.js'></script>
   </head>
      <body> 
@@ -23,7 +33,7 @@
             <ul>
             <li style="display:inline;"><a href="../inicio.html">Inicio</a></li>
             <li style="display:inline;"><a href="productos.html">Productos</a></li>
-            <li style="display:inline;"><a href="nosotros.html">Nosotros</a></li>          
+            <li style="display:inline;"><a href="nosotros.php">Nosotros</a></li>          
             <li style="display:inline;"><a href="ubicacion.html">Ubicación</a></li>
             <li style="display:inline;"><a href="contacto.html">Contacto</a></li>
             <li style="display:inline;"><a href="login.html">Login</a></li>
@@ -31,33 +41,15 @@
         </nav>
             <hr/>
         </div> 
-        <div class = "contacto">
-            <p>¿Te gustaría ser distribuidor de café mexicano?</p>
-            <p>Contáctanos</p>
-        </div>               
-        <form action="/my-handling-form-page" method="post">
-            <div>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" />
-            </div>
-            <div>
-                <label for="correo electrónico">Correo electrónico:</label>
-                <input type="email" id="correo" />
-            </div>
-            <div>
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="msg"></textarea>
-            </div>
-            
-            <div class="button">
-                <button type="submit">Enviar</button>
-            </div>
-        </form>
+        <article>
+            <div><img style = "padding-left: 200px" src="<?php echo($nosotros -> getImagen());?>"></div>
+            <p><?php echo($nosotros -> getTexto());?></p>
          <hr/> 
+         </article> 
+        <hr/> 
          <footer>
             <h5>2019 &COPY; Clauzm/Developer.</h5>
             <hr/> 
          </footer>
     </body>
 </html>
-

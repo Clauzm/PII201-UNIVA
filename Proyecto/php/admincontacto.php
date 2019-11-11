@@ -1,3 +1,12 @@
+<?php  
+require "clases/Consulta.php";
+require_once "clases/Contacto.php";
+
+$consulta = new Consulta;
+$sql ="select * from contacto;";
+$lista = $consulta -> getContacto($sql);
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -34,30 +43,32 @@
         <div class = "contacto">
             <p>¿Te gustaría ser distribuidor de café mexicano?</p>
             <p>Contáctanos</p>
-        </div>               
-        <form action="/my-handling-form-page" method="post">
-            <div>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" />
-            </div>
-            <div>
-                <label for="correo electrónico">Correo electrónico:</label>
-                <input type="email" id="correo" />
-            </div>
-            <div>
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="msg"></textarea>
-            </div>
-            
-            <div class="button">
-                <button type="submit">Enviar</button>
-            </div>
-        </form>
-         <hr/> 
+        </div>  
+       <br><br>
+       <form action="<?php $_SERVER['PHP_SELF'];?>" method="POST">
+           <table>
+               <tr>
+                   <th width="150">Nombre</th>
+                   <th width="200">Email</th>
+                   <th width="300">Comentario</th>
+                   <th width="120">Fecha</th>
+               </tr>
+               <!--  Transformar php en html -->
+               <?php
+                $contacto = new Contacto;
+                foreach($lista as $contacto){
+                echo("<tr>");
+                echo("<td>". $contacto -> getNombre()."</td>");
+                echo("<td>". $contacto -> getEmail()."</td>");
+                echo("<td>". $contacto -> getComentario()."</td>");
+                echo("<td>". $contacto -> getFecha()."</td>");
+               echo("</tr>");
+                }?>
+           </table>
+           <hr/> 
          <footer>
             <h5>2019 &COPY; Clauzm/Developer.</h5>
             <hr/> 
          </footer>
     </body>
 </html>
-
