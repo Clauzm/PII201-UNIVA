@@ -24,12 +24,12 @@ class Consulta{
 }
 
     public function getIndex($query){
-        $inicio = new Inicio;
+        $inicio = new inicioAdmin;
         $result = $this -> connection -> conn -> query($query);
         if($result -> num_rows > 0){
             $row = $result -> fetch_assoc();
             $inicio-> setImagen($row['imagen']);
-            $inicio -> setTexto1($row['texto1']);
+            $inicio -> setTexto($row['texto1']);
             return $inicio;
         }
         else{

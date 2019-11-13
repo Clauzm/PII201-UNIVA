@@ -15,7 +15,6 @@ if(isset($post['submit'])){
     $update = new Actualizar;
     $update -> actualizar($sql);
 
-  //  echo '<script> type="text/javascript">', 'location.reload();','</script>';
     
 }
 
@@ -40,7 +39,7 @@ if(isset($post['submit'])){
         <nav>         
             <div class="navlist">
             <ul>
-            <li style="display:inline;"><a href="../inicio.html">Inicio</a></li>
+            <li style="display:inline;"><a href="../phpusuario/inicio.php">Inicio</a></li>
             <li style="display:inline;"><a href="productos.html">Productos</a></li>
             <li style="display:inline;"><a href="../phpusuario/nosotros.php">Nosotros</a></li>          
             <li style="display:inline;"><a href="ubicacion.html">Ubicación</a></li>

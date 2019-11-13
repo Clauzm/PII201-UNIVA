@@ -1,96 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Admin inicio</title>
-</head>
-<body>
-    <?php
 
-        $server = "localhost";
-        $username = "root";
-        $password = ""; 
-        $database = "cafemexico"; 
+<?php
+require_once "../clases/Inicio.php";
+require "../clases/Consulta.php";
+require "../clases/Actualizar.php";
 
-        $connection = mysqli_connect($server, $username, $password, $database);
+$consulta = new Consulta;
+$adminIndex = new inicioAdmin;
+$query = "select * from inicio";
+$adminIndex = $consulta -> getIndex($query);
+$post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+if(isset($post['submit'])){    
+    $adminIndex -> setTexto($post['texto1']);
+    $adminIndex -> setImagen($post['file']);
+    $sql = "update inicio set texto1='".$adminIndex -> getTexto()."', imagen='../img/".$adminIndex -> getImagen()."', where idinicio = 1;";
+    $update = new Actualizar;
+    $update -> actualizar($sql);
 
-    ?>
-
-    <h3>Consulta</h3>
-
-    <table width="500" border="1" style="background-color:#F9F9F9;">
-          <tr>
-            <th>Id</th>                           
-            <th>texto1</th>
-            <th>Editar</th>
-          </tr>          
-
-    <?php      
     
-        
-        $consulta = "SELECT * FROM inicio";
-        $ejecutar = mysqli_query($connection, $consulta);          
+}
 
-        $i=0;
-
-        while($fila = mysqli_fetch_array($ejecutar)){
-            $id = $fila['idinicio'];
-            $texto1 = $fila['texto1'];
-
-            $i++;
-    ?>
-
-        <tr aligne = "center">
-            <td><?php echo $id; ?></td>
-            <td><?php echo $texto1; ?></td>
-            <td><a href="admininicio.php?editar=<?php echo $id;?>">Editar</a></td>
-
-    <?php } ?>
-
-    </table>
-
-    <?php 
-
-        if(isset($_GET['editar'])){
-					
-		$editar_id = $_GET['editar']; 
-		
-		$consulta = "SELECT * FROM inicio WHERE idinicio='$editar_id'";
-		$ejecutar = mysqli_query($connection, $consulta); 
-		
-		$fila=mysqli_fetch_array($ejecutar);
-			
-        $texto1 = $fila['texto1'];      
-    
-        }
 ?>
 
-<br>
-
-<form method="post" action="">
-        <textarea name="texto1" id="" cols="70" rows="10" value="<?php echo $texto1;?>"></textarea><br><br>
-		<input type="submit" name="actualizar" value="ACTUALIZAR DATOS"/>
-	
-</form>
-	<?php 
-	if(isset($_POST['actualizar'])){
-	
-        $actualizar_texto1 = $_POST['texto1'];        
-		
-		$actualizar = "UPDATE inicio SET texto1='$actualizar_texto1' WHERE idinicio='$editar_id'";
-		
-		$ejecutar = mysqli_query($connection, $actualizar);
-	
-		if($ejecutar){
-		
-		echo "<script>alert('Datos actualizados!')</script>";
-		echo "<script>window.open('admininicio.php','_self')</script>";
-		}
-	}
-	
-?> 
-    
-</body>
+<!Doctype html>
+<html>
+    <head>
+        <title>Administrador</title>
+        <link rel="stylesheet" href="../CSS/styleindex.css">
+    </head>
+    <body>
+    <hr/>            
+        <header>              
+             <section>                
+                <tr>
+                    <td><img src="../img/cafeMexico.png" alt="Cafe Mexico"></td>
+                    <td><h1 style="display:inline; margin-left: 130px;">El verdadero sabor del café</h1></td>                                                             
+             </section>                   
+        </header> 
+        <hr/>  
+        <nav>         
+            <div class="navlist">
+            <ul>
+            <li style="display:inline;"><a href="../phpusuario/inicio.php">Inicio</a></li>
+            <li style="display:inline;"><a href="productos.html">Productos</a></li>
+            <li style="display:inline;"><a href="../phpusuario/nosotros.php">Nosotros</a></li>          
+            <li style="display:inline;"><a href="ubicacion.html">Ubicación</a></li>
+            <li style="display:inline;"><a href="contacto.html">Contacto</a></li>
+            <li style="display:inline;"><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <hr/>
+        </div>
+       <div style="padding-top: 50px">
+          <form action="<?php $_SERVER['PHP_SELF'];?>" method="POST">
+           <h2>Texto 1</h2>
+           <textarea name="texto1" id="" cols="70" rows="10" ><?php echo($adminIndex -> getTexto());?></textarea>
+           <br><br>
+           <h2>Imagen</h2>
+           <img src="<?php echo($adminIndex -> getImagen());?>" alt="" style="width: 500px;">
+           <input type="file" name="file" >
+           <br><br>
+           <button type="submit" name="submit" >Guardar</button>
+           <br><br>
+           </form>
+       </div>
+        <footer>
+            <hr/>
+            <h5>2019 &COPY; Clauzm/Developer.</h5>
+            <hr/> 
+        </footer>
+    </body>
 </html>
