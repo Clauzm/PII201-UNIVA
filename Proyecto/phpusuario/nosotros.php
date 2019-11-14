@@ -44,7 +44,6 @@ $nosotros = $consulta -> getNosotros($query);
         <article>
             <div><img style = "padding-left: 200px" src="<?php echo($nosotros -> getImagen());?>"></div>
             <p><?php echo($nosotros -> getTexto());?></p>
-         <hr/> 
          </article> 
         <hr/> 
          <footer>

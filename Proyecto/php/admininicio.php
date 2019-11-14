@@ -1,18 +1,17 @@
-
 <?php
 require_once "../clases/Inicio.php";
 require "../clases/Consulta.php";
 require "../clases/Actualizar.php";
 
 $consulta = new Consulta;
-$adminIndex = new inicioAdmin;
+$inicio = new inicioAdmin;
 $query = "select * from inicio";
-$adminIndex = $consulta -> getIndex($query);
+$inicio = $consulta -> getIndex($query);
 $post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 if(isset($post['submit'])){    
-    $adminIndex -> setTexto($post['texto1']);
-    $adminIndex -> setImagen($post['file']);
-    $sql = "update inicio set texto1='".$adminIndex -> getTexto()."', imagen='../img/".$adminIndex -> getImagen()."', where idinicio = 1;";
+    $inicio -> setTexto($post['texto1']);
+    $inicio -> setImagen($post['file']);
+    $sql = "update inicio set texto1='".$inicio -> getTexto()."', imagen='../img/".$inicio -> getImagen()."' where idinicio = 1;";
     $update = new Actualizar;
     $update -> actualizar($sql);
 
@@ -53,10 +52,10 @@ if(isset($post['submit'])){
        <div style="padding-top: 50px">
           <form action="<?php $_SERVER['PHP_SELF'];?>" method="POST">
            <h2>Texto 1</h2>
-           <textarea name="texto1" id="" cols="70" rows="10" ><?php echo($adminIndex -> getTexto());?></textarea>
+           <textarea name="texto1" id="" cols="70" rows="10" ><?php echo($inicio -> getTexto());?></textarea>
            <br><br>
            <h2>Imagen</h2>
-           <img src="<?php echo($adminIndex -> getImagen());?>" alt="" style="width: 500px;">
+           <img src="<?php echo($inicio -> getImagen());?>" alt="" style="width: 500px;">
            <input type="file" name="file" >
            <br><br>
            <button type="submit" name="submit" >Guardar</button>

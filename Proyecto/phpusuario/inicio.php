@@ -2,10 +2,10 @@
 require_once "../clases/Inicio.php";
 require "../clases/Consulta.php";
 
-$adminIndex = new inicioAdmin;
+$inicio = new inicioAdmin;
 $consulta = new Consulta;
 $query = "select * from inicio;";
-$adminIndex = $consulta -> getIndex($query);
+$inicio = $consulta -> getIndex($query);
 
 ?>
 
@@ -16,7 +16,6 @@ $adminIndex = $consulta -> getIndex($query);
     <title>Café México - Jalisco, México.</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="../CSS/styleindex.css">
-    <script src='main.js'></script>
   </head>
      <body> 
         <hr/>            
@@ -42,8 +41,8 @@ $adminIndex = $consulta -> getIndex($query);
             <hr/>
         </div> 
         <article>
-            <div><img style = "float:right; padding-right:130px;" src="<?php echo($adminIndex -> getImagen());?>"></div>
-            <p><?php echo($adminIndex -> getTexto());?></p>
+            <div><img style = "float:right; padding-right:130px" src="<?php echo($inicio -> getImagen());?>"></div>
+            <p><?php echo($inicio -> getTexto());?></p>
          <hr/> 
          </article> 
          <footer>
