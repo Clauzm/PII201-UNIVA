@@ -51,6 +51,7 @@
                             <th><h2>Productos</th>
                             <th><h2>Nosotros</th>
                             <th><h2>Ubicación</th>
+                            <th><h2>Contacto</th>
                           </tr>
                           <tr>
                             <td><a href = 'adminusuario.php'</a> 
@@ -63,6 +64,8 @@
                             <img src='../img/nosotros.png' alt='Nosotros'></td>
                             <td><a href = 'adminubicacion.php'</a> 
                             <img src='../img/ubicacion.png' alt='Ubicación'></td>
+                            <td><a href = 'admincontacto.php'</a> 
+                            <img src='../img/contacto.png' alt='Contacto'></td>
                           </tr>";
                     break;
                 } else {

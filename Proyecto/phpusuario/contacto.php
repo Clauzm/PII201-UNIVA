@@ -1,10 +1,12 @@
-<?php  
-require "../clases/Consulta.php";
-require_once "../clases/Contacto.php";
+<?php
 
-$consulta = new Consulta;
-$sql ="select * from contacto;";
-$lista = $consulta -> getContacto($sql);
+$server = "localhost";
+$username = "root";
+$password = ""; 
+$database = "cafemexico"; 
+
+$connection = mysqli_connect($server, $username, $password, $database);
+
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +16,7 @@ $lista = $consulta -> getContacto($sql);
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Café México - Jalisco, México.</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="stylesheet" href="../CSS/formulariophp.css">
+    <link rel="stylesheet" href="../CSS/fomulariostyle.css">
   </head>
      <body> 
         <hr/>            
@@ -40,35 +42,44 @@ $lista = $consulta -> getContacto($sql);
             <hr/>
         </div> 
         <div class = "contacto">
-            <p>Mensajes recibidos</p>
-        </div>  
-       <br><br>
-       <form action="<?php $_SERVER['PHP_SELF'];?>" method="POST">
-           <table style= "margin-top: 1px;">
-               <tr>
-                   <th width="150">Nombre</th>
-                   <th width="200">Email</th>
-                   <th width="300">Comentario</th>
-                   <th width="120">Fecha</th>
-               </tr>
-               <!--  Transformar php en html -->
-               <?php
-                $contacto = new Contacto;
-                foreach($lista as $contacto){
-                echo("<tr>");
-                echo("<td>". $contacto -> getNombre()."</td>");
-                echo("<td>". $contacto -> getEmail()."</td>");
-                echo("<td>". $contacto -> getComentario()."</td>");
-                echo("<td>". $contacto -> getFecha()."</td>");
-                echo("</tr>");
-                }?>
-           </table>
-           <hr/> 
+            <p>¿Te gustaría ser distribuidor de café mexicano?</p>
+            <p>Contáctanos</p>
+        </div>               
+        <form action="contacto.php" method="POST">
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre">
+            </div>
+            <div>
+                <label for="correo electrónico">Correo electrónico:</label>
+                <input type="email" name="email">
+            </div>
+            <div>
+                <label for="mensaje">Mensaje:</label>
+                <textarea name="comentario" id="" cols="70" rows="10" ></textarea>
+            </div>            
+            <div class="button">
+                <input type="submit" name="insert" value="Registrar">
+            </div>
+        </form>
+         <hr/> 
          <footer>
-            <div class = "pie">
             <h5>2019 &COPY; Clauzm/Developer.</h5>
             <hr/> 
-            </div>
          </footer>
     </body>
 </html>
+
+<?php
+
+if(isset($_POST['insert'])){
+    $nombre = $_POST['nombre'];
+    $email = $_POST['email'];
+    $comentario = $_POST['comentario'];        
+
+    $registrar = "INSERT INTO contacto (nombre,email,comentario) VALUES ('$nombre','$email','$comentario')";
+
+    $ejecutar = mysqli_query($connection, $registrar);
+
+}
+?>
