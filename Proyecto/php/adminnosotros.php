@@ -9,7 +9,7 @@ $query = "select * from nosotros";
 $nosotros = $consulta -> getNosotros($query);
 $post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 if(isset($post['submit'])){
-    $nosotros -> setTexto($post['texto']);
+    $nosotros -> setTexto($post['texto1']);
     $nosotros -> setImagen($post['file2']);
     $sql = "update nosotros set texto1='".$nosotros -> getTexto()."', imagennos='../img/".$nosotros -> getImagen()."' where idnosotros = 1;";
     $update = new Actualizar;
