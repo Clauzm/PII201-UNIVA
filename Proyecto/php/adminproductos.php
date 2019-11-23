@@ -1,12 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Administrador de usuarios</title>
-</head>
-<body>
+<!Doctype html>
+<html>
+    <head>
+        <title>Administrador</title>
+        <link rel="stylesheet" href="../CSS/styleindex.css">
+    </head>
+    <body>
+    <hr/>            
+        <header>              
+             <section>                
+                <tr>
+                    <td><img src="../img/cafeMexico.png" alt="Cafe Mexico"></td>
+                    <td><h1 style="display:inline; margin-left: 130px;">El verdadero sabor del café</h1></td>                                                             
+             </section>                   
+        </header> 
+        <hr/>  
+        <nav>         
+            <div class="navlist">
+            <ul>
+            <li style="display:inline;"><a href="../phpusuario/inicio.php">Inicio</a></li>
+            <li style="display:inline;"><a href="productos.html">Productos</a></li>
+            <li style="display:inline;"><a href="../phpusuario/nosotros.php">Nosotros</a></li>          
+            <li style="display:inline;"><a href="ubicacion.html">Ubicación</a></li>
+            <li style="display:inline;"><a href="contacto.html">Contacto</a></li>
+            <li style="display:inline;"><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+            <hr/>
+        </div> 
     <?php
 
         $server = "localhost";

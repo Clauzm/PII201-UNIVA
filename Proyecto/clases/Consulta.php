@@ -50,6 +50,18 @@ class Consulta{
         }
     }
      
+    public function getUbicacion($query){
+        $ubicacion = new Ubicacion;
+        $result = $this -> connection -> conn -> query($query);
+        if($result -> num_rows > 0){
+            $row = $result -> fetch_assoc();            
+            $ubicacion -> setTexto($row['texto1']);
+            $ubicacion -> setImagen($row['imagenubicacion']);
+            return $ubicacion;
+        }else{
+            return null;
+        }
+    }
 
     public function getContacto($query){
         $lista = array();

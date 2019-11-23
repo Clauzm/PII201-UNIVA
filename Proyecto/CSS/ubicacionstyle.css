@@ -69,8 +69,8 @@ article > div > img{
 
 article > p{
     font-size: 25px;
-    padding-left: 220px;
     font-family: monospace;
+    
 
 }
 
@@ -97,6 +97,3 @@ footer > hr {
     border-width: 0.5px;
 }
 
-h4{
-    text-align: center;
-}
