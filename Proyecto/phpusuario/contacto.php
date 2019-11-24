@@ -16,7 +16,7 @@ $connection = mysqli_connect($server, $username, $password, $database);
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Café México - Jalisco, México.</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="stylesheet" href="../CSS/fomulariostyle.css">
+    <link rel="stylesheet" href="../CSS/fomulariocontacto.css">
   </head>
      <body> 
         <hr/>            
@@ -31,12 +31,12 @@ $connection = mysqli_connect($server, $username, $password, $database);
         <nav>         
             <div class="navlist">
             <ul>
-            <li style="display:inline;"><a href="../inicio.html">Inicio</a></li>
-            <li style="display:inline;"><a href="productos.html">Productos</a></li>
-            <li style="display:inline;"><a href="nosotros.html">Nosotros</a></li>          
-            <li style="display:inline;"><a href="ubicacion.html">Ubicación</a></li>
-            <li style="display:inline;"><a href="contacto.html">Contacto</a></li>
-            <li style="display:inline;"><a href="login.html">Login</a></li>
+            <li style="display:inline;"><a href="inicio.php">Inicio</a></li>
+            <li style="display:inline;"><a href="productos.php">Productos</a></li>
+            <li style="display:inline;"><a href="nosotros.php">Nosotros</a></li>          
+            <li style="display:inline;"><a href="ubicacion.php">Ubicación</a></li>
+            <li style="display:inline;"><a href="contacto.php">Contacto</a></li>
+            <li style="display:inline;"><a href="../html/login.html">Login</a></li>
             </ul>
         </nav>
             <hr/>
@@ -57,9 +57,10 @@ $connection = mysqli_connect($server, $username, $password, $database);
             <div>
                 <label for="mensaje">Mensaje:</label>
                 <textarea name="comentario" id="" cols="70" rows="10" ></textarea>
-            </div>            
-            <div class="button">
-                <input type="submit" name="insert" value="Registrar">
+            </div>
+            <br> 
+            <div class="button"> 
+                <input type="submit" name="insert" value="Enviar">
             </div>
         </form>
          <hr/> 

@@ -31,14 +31,12 @@
     $connection = mysqli_connect($server, $username, $password, $database);
 
     if ($connection) {
-        //echo "You are connected";
 
         $sqlquery = "SELECT * FROM usuarios";
         $result = mysqli_query($connection, $sqlquery);
 
         if (mysqli_num_rows($result) > 0) {
             while($row = mysqli_fetch_assoc($result)){
-                //echo $row['username']."+".$row['userpassword'];
                 if ($correo == $row['correo'] && $contrasena == $row['pass']) {
                     echo "<a href='acciones.php'></a>";
                     echo '<div class="titulo"><h1>Bienvenido administrador</h1></div>';

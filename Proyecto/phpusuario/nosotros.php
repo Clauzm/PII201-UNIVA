@@ -31,12 +31,12 @@ $nosotros = $consulta -> getNosotros($query);
         <nav>         
             <div class="navlist">
             <ul>
-            <li style="display:inline;"><a href="../inicio.html">Inicio</a></li>
-            <li style="display:inline;"><a href="productos.html">Productos</a></li>
+            <li style="display:inline;"><a href="inicio.php">Inicio</a></li>
+            <li style="display:inline;"><a href="productos.php">Productos</a></li>
             <li style="display:inline;"><a href="nosotros.php">Nosotros</a></li>          
-            <li style="display:inline;"><a href="ubicacion.html">Ubicación</a></li>
-            <li style="display:inline;"><a href="contacto.html">Contacto</a></li>
-            <li style="display:inline;"><a href="login.html">Login</a></li>
+            <li style="display:inline;"><a href="ubicacion.php">Ubicación</a></li>
+            <li style="display:inline;"><a href="contacto.php">Contacto</a></li>
+            <li style="display:inline;"><a href="../html/login.html">Login</a></li>
             </ul>
         </nav>
             <hr/>

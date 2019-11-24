@@ -51,7 +51,7 @@ $lista = $consulta -> getContacto($sql);
                    <th width="300">Comentario</th>
                    <th width="120">Fecha</th>
                </tr>
-               <!--  Transformar php en html -->
+
                <?php
                 $contacto = new Contacto;
                 foreach($lista as $contacto){
