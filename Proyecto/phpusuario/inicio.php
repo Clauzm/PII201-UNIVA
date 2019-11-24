@@ -30,7 +30,7 @@ $inicio = $consulta -> getIndex($query);
         <nav>         
             <div class="navlist">
             <ul>
-            <li style="display:inline;"><a href="inicio.php">Inicio</a></li>
+            <li style="display:inline;"><a href="../php/admininicio.php">Inicio</a></li>
             <li style="display:inline;"><a href="productos.html">Productos</a></li>
             <li style="display:inline;"><a href="nosotros.php">Nosotros</a></li>          
             <li style="display:inline;"><a href="ubicacion.html">Ubicación</a></li>

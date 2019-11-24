@@ -1,3 +1,7 @@
+form>text{
+    border-color: brown;
+}
+
 hr{
     border-color: brown;
     border-width: 0.5px;  
@@ -9,8 +13,8 @@ section > div > p{
 
 
 .top-bar{
-    margin-top: 7px;
-    padding-left: 7px;
+    margin-top: 5px;
+    padding-left: 5px;
     width: 100%; 
 }
 
@@ -24,8 +28,18 @@ nav > div > hr{
     border-width: 0.5px;
 }
 
-.navlist li
-{    
+nav > div > hr{
+    border-color: brown;
+    border-width: 0.5px;
+}
+
+
+nav > div > hr{
+    border-color: brown;
+    border-width: 0.5px;
+}
+
+.navlist li{    
     display: inline;
     border-top: 19px;
     font-family: monospace;
@@ -50,6 +64,7 @@ nav > div > hr{
 .navlist > ul > li > a:hover{
     color: palevioletred;
 }
+
 
 
 article > p {
@@ -85,35 +100,17 @@ footer > h5{
     
 }
 
-footer > hr {
-    border-color: brown;
-    border-width: 0.5px;
-
-}
-
-
 footer{
     margin-top: 100px;
     margin-bottom: 1px;
 }
 
-article > h1{
-    text-align: left;
-    color: black;
-    padding-left: 65px;
-    
+footer > hr {    
+    border-color: brown;
+    border-width: 0.5px;
 }
 
-table{
-    font-family: 'Courier New', Courier, monospace;
-    border: 1px solid black;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-}
-
-th, td{
-    border: 0.5px solid  brown; 
+h4{
     text-align: center;
-    padding: 8px;
 }
 

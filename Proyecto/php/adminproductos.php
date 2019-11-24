@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Administrador</title>
-        <link rel="stylesheet" href="../CSS/styleindex.css">
+        <link rel="stylesheet" href="../CSS/adminproductosstyle.css">
     </head>
     <body>
     <hr/>            
@@ -40,18 +40,15 @@
 
     <form action="adminproductos.php" method="POST">
         <label for="Nombre"></label>
+        <br>
         <input type="text" name="bebidascalientes" placeholder="bebida caliente">
-        <br><br>
-        <input type="text" name="preciobebidascalientes" placeholder="precio bebida caliente">
+        <input type="text" name="preciobebidascalientes" placeholder="$ precio bebida caliente">
         <br><br>
         <input type="text" name="bebidasfrias" placeholder="bebida fria">
-        <br><br>
-        <input type="text" name="preciobebidasfrias" placeholder="precio bebida fria">
+        <input type="text" name="preciobebidasfrias" placeholder="$ precio bebida fria">
         <br><br>
         <input type="text" name="platillos" placeholder="platillo">
-        <br><br>
-        <input type="text" name="precioplatillos" placeholder="precio platillo">
-        <br><br>
+        <input type="text" name="precioplatillos" placeholder="$ precio platillo">
         <input type="submit" name="insert" value="Registrar">
     </form>
 
@@ -81,12 +78,12 @@
 
     <br   />
 
-    <table width="500" border="1" style="background-color:#F9F9F9;">
+    <table width="1100" border="1" style="background-color:#F9F9F9;">
           <tr>
             <th>id</th>
-            <th>Café frio</th>                           
+            <th>Café Caliente</th>                           
             <th>precio</th>
-            <th>Café Caliente</th>
+            <th>Café Frio</th>
             <th>precio</th>
             <th>Platillo</th>
             <th>precio</th>
@@ -156,13 +153,13 @@
 <br>
 
 <form method="post" action="">
-        <input type="text" name="bebidascalientes" value="<?php echo $cafecaliente;?>"/><br>
-        <input type="text" name="preciobebidascalientes" value="<?php echo $preciocafecaliente ;?>"/><br>
-		<input type="text" name="bebidasfrias" value="<?php echo $cafefrio;?>"/><br>
-        <input type="text" name="preciobebidasfrias" value="<?php echo $preciocafefrio;?>"/><br>
-        <input type="text" name="platillos" value="<?php echo $platillos ;?>"/><br>
-		<input type="text" name="precioplatillos" value="<?php echo $precioplatillos;?>"/><br>	
-		<input type="submit" name="actualizar" value="ACTUALIZAR DATOS"/>
+        <input type="text" name="bebidascalientes" value="<?php echo $cafecaliente;?>"/>
+        <input type="text" name="preciobebidascalientes" value="<?php echo $preciocafecaliente ;?>"/>
+		<input type="text" name="bebidasfrias" value="<?php echo $cafefrio;?>"/>
+        <input type="text" name="preciobebidasfrias" value="<?php echo $preciocafefrio;?>"/>
+        <input type="text" name="platillos" value="<?php echo $platillos ;?>"/>
+		<input type="text" name="precioplatillos" value="<?php echo $precioplatillos;?>"/>	
+		<input type="submit" name="actualizar" value="Actualizar Datos"/>
 	
 </form>
 
@@ -212,7 +209,11 @@
         }
         
         ?>
-
-</body>
+        <footer>
+            <hr>
+            <h5>2019 &COPY; Clauzm/Developer.</h5>
+            <hr/> 
+         </footer>
+    </body>
 </html>
 
