@@ -38,7 +38,6 @@
         if (mysqli_num_rows($result) > 0) {
             while($row = mysqli_fetch_assoc($result)){
                 if ($correo == $row['correo'] && $contrasena == $row['pass']) {
-                    echo "<a href='acciones.php'></a>";
                     echo '<div class="titulo"><h1>Bienvenido administrador</h1></div>';
                     echo '<div class="subtitulo"><h3>Ir a la página dónde quieres realizar cambios, selecciona una tarjeta 
                     te llevará ahí para que puedas generar las acciones.</h3></div>';               
@@ -74,7 +73,7 @@
                 }                
             }
         } else {
-            echo "UPS! Error 001, query vacioo";
+            echo "UPS! Error 001, query vacio";
         }
         
 

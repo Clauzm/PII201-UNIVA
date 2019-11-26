@@ -29,12 +29,12 @@ $lista = $consulta -> getContacto($sql);
         <nav>         
             <div class="navlist">
             <ul>
-            <li style="display:inline;"><a href="../inicio.html">Inicio</a></li>
-            <li style="display:inline;"><a href="productos.html">Productos</a></li>
-            <li style="display:inline;"><a href="nosotros.html">Nosotros</a></li>          
-            <li style="display:inline;"><a href="ubicacion.html">Ubicación</a></li>
-            <li style="display:inline;"><a href="contacto.html">Contacto</a></li>
-            <li style="display:inline;"><a href="login.html">Login</a></li>
+            <li style="display:inline;"><a href="admininicio.php">Inicio</a></li>
+            <li style="display:inline;"><a href="adminproductos.php">Productos</a></li>
+            <li style="display:inline;"><a href="adminnosotros.php">Nosotros</a></li>          
+            <li style="display:inline;"><a href="adminubicacion.php">Ubicación</a></li>
+            <li style="display:inline;"><a href="admincontacto.php">Contacto</a></li>
+            <li style="display:inline;"><a href="../html/login.html">Login</a></li>
             </ul>
         </nav>
             <hr/>
@@ -64,6 +64,7 @@ $lista = $consulta -> getContacto($sql);
                 }?>
            </table>
            <hr/> 
+           </form>
          <footer>
             <div class = "pie">
             <h5>2019 &COPY; Clauzm/Developer.</h5>

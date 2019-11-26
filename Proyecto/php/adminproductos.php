@@ -17,12 +17,12 @@
         <nav>         
             <div class="navlist">
             <ul>
-            <li style="display:inline;"><a href="../phpusuario/inicio.php">Inicio</a></li>
-            <li style="display:inline;"><a href="productos.html">Productos</a></li>
-            <li style="display:inline;"><a href="../phpusuario/nosotros.php">Nosotros</a></li>          
-            <li style="display:inline;"><a href="ubicacion.html">Ubicación</a></li>
-            <li style="display:inline;"><a href="contacto.html">Contacto</a></li>
-            <li style="display:inline;"><a href="login.html">Login</a></li>
+            <li style="display:inline;"><a href="admininicio.php">Inicio</a></li>
+            <li style="display:inline;"><a href="adminproductos.php">Productos</a></li>
+            <li style="display:inline;"><a href="adminnosotros.php">Nosotros</a></li>          
+            <li style="display:inline;"><a href="adminubicacion.php">Ubicación</a></li>
+            <li style="display:inline;"><a href="admincontacto.php">Contacto</a></li>
+            <li style="display:inline;"><a href="../html/login.html">Login</a></li>
             </ul>
         </nav>
             <hr/>
