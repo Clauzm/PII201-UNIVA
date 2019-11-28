@@ -8,6 +8,7 @@ $ubicacion = new Ubicacion;
 $query = "select * from ubicacion";
 $ubicacion = $consulta -> getUbicacion($query);
 $post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+//Obtiene variables externas y las filtra
 if(isset($post['submit'])){
     $ubicacion -> setTexto($post['texto']);
     $ubicacion -> setImagen($post['file2']);
@@ -50,9 +51,11 @@ if(isset($post['submit'])){
        <div style="padding-top: 70px">
           <form action="<?php $_SERVER['PHP_SELF'];?>" method="POST">
            <h2>Texto</h2>
+           <!--Tomamos los valores de Consulta.php-->
            <textarea name="texto" id="" cols="76" rows="10" ><?php echo($ubicacion -> getTexto());?></textarea>
            <h2>Imagen</h2>
-           <img src="<?php echo($ubicacion -> getImagen());?>" alt="" style="width: 500px;">
+           <!--Tomamos los valores de Consulta.php-->
+           <img src="<?php echo($ubicacion -> getImagen());?>" alt="" style="width: 500px;"> 
            <input type="file" name="file2" >
            <br><br>
            <button type="submit" name="submit" >Guardar</button>

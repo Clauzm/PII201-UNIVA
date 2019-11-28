@@ -8,11 +8,14 @@ require_once "Productos.php";
 class Consulta{
     private $connection;
 
+    //Método constructor que instancia la conexión para poderla usar posteriormente en el login
     public function __construct(){
+        //Devolvemos un atributo con la instancia
         $this -> connection = new Conexion;
 
     }
 
+    //Método que recibe un atributo ($query) para asignarla a result y result nos conecte a la BD si es correcto usuario y contraseña
     public function login($query){
         $result = $this -> connection -> conn-> query($query);
         if($result -> num_rows > 0){
@@ -23,11 +26,14 @@ class Consulta{
         }
 }
 
+    //Método que recibe un atributo ($query) para asignarla a result y result nos conecte a la BD si es correcto usuario y contraseña
     public function getIndex($query){
+        //instanciamos InicioAdmin y la asignamos a inicio para usar los metodos get y set
         $inicio = new inicioAdmin;
         $result = $this -> connection -> conn -> query($query);
         if($result -> num_rows > 0){
             $row = $result -> fetch_assoc();
+            //tomamos lo de página admininicio.php que a su vez lo guarda en la BD para ver los cambios en inicio.php
             $inicio-> setImagen($row['imagen']);
             $inicio -> setTexto($row['texto1']);
             return $inicio;
@@ -49,7 +55,8 @@ class Consulta{
             return null;
         }
     }
-     
+
+    //Método que   
     public function getUbicacion($query){
         $ubicacion = new Ubicacion;
         $result = $this -> connection -> conn -> query($query);

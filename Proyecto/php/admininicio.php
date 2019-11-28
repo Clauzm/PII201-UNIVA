@@ -7,6 +7,7 @@ $consulta = new Consulta;
 $inicio = new inicioAdmin;
 $query = "select * from inicio";
 $inicio = $consulta -> getIndex($query);
+//Obtiene variables externas y las filtra
 $post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 if(isset($post['submit'])){    
     $inicio -> setTexto($post['texto1']);

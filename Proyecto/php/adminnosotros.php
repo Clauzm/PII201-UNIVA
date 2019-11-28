@@ -7,6 +7,7 @@ $consulta = new Consulta;
 $nosotros = new Nosotros;
 $query = "select * from nosotros";
 $nosotros = $consulta -> getNosotros($query);
+//Obtiene variables externas y las filtra
 $post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 if(isset($post['submit'])){
     $nosotros -> setTexto($post['texto1']);

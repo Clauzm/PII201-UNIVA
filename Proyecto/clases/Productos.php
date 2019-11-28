@@ -1,7 +1,9 @@
 <?php
 
+//Definimos la clase
 class Productos{
 
+    //Atributos
     private $id;
     private $texto1;
     private $precio1;
@@ -11,7 +13,9 @@ class Productos{
     private $precio3;
     private $imagen;
 
+    // Metodos
     public function getId(){
+        //Devolvemos un atributo
         return $this -> id;
     }
     public function getTexto1(){
@@ -43,6 +47,7 @@ class Productos{
     }
  
     public function setId($id){
+        //Le damos un valor a un atributo
         $this -> id = $id;
     }
     public function setTexto1($texto1){
