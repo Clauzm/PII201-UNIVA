@@ -114,3 +114,7 @@ h4{
     text-align: center;
 }
 
+div.UltimaHora{
+    margin-inline-start: auto;
+    font-family: monospace;
+}

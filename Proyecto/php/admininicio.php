@@ -26,6 +26,7 @@ if(isset($post['submit'])){
     <head>
         <title>Administrador</title>
         <link rel="stylesheet" href="../CSS/styleindex.css">
+        <script src="../js/myfunctions.js"></script>
     </head>
     <body>
     <hr/>            
@@ -59,7 +60,7 @@ if(isset($post['submit'])){
            <img src="<?php echo($inicio -> getImagen());?>" alt="" style="width: 500px;">
            <input type="file" name="file" >
            <br><br>
-           <button type="submit" name="submit" >Guardar</button>
+           <button onclick="update()" type="submit" name="submit" >Guardar</button>
            <br><br>
            </form>
        </div>

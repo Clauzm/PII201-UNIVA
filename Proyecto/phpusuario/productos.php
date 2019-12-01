@@ -16,7 +16,7 @@ $connection = mysqli_connect($server, $username, $password, $database);
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Café México - Jalisco, México.</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="stylesheet" href="../CSS/tablestyle.css">
+    <link rel="stylesheet" href="../CSS/tablestyles.css">
   </head>
      <body> 
         <hr/>            
@@ -41,7 +41,7 @@ $connection = mysqli_connect($server, $username, $password, $database);
             <hr/>
         </div> 
         <article>
-        <h1>Productos</h1>
+        <h2>Productos</h2>
           <table>
           <tr style= "background-color: burlywood; color:white">
                   <th>Café caliente</th>

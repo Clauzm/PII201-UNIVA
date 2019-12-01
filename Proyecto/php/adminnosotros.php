@@ -10,13 +10,11 @@ $nosotros = $consulta -> getNosotros($query);
 //Obtiene variables externas y las filtra
 $post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 if(isset($post['submit'])){
-    $nosotros -> setTexto($post['texto1']);
+    $nosotros -> setTexto($post['texto']);
     $nosotros -> setImagen($post['file2']);
     $sql = "update nosotros set texto1='".$nosotros -> getTexto()."', imagennos='../img/".$nosotros -> getImagen()."' where idnosotros = 1;";
     $update = new Actualizar;
-    $update -> actualizar($sql);
-
-    
+    $update -> actualizar($sql);    
 }
 
 ?>

@@ -209,9 +209,14 @@
         }
         
         ?>
+
+ 
         <footer>
             <hr>
-            <h5>2019 &COPY; Clauzm/Developer.</h5>
+            <h5>2019 &COPY; Clauzm/Developer.</h5> 
+            <div class="UltimaHora">
+            <script>document.write(document.lastModified)</script>
+            </div>                          
             <hr/> 
          </footer>
     </body>

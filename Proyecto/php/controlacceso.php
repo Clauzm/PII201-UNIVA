@@ -42,8 +42,7 @@
                     echo '<div class="subtitulo"><h3>Ir a la página dónde quieres realizar cambios, selecciona una tarjeta 
                     te llevará ahí para que puedas generar las acciones.</h3></div>';               
                     echo "<table>
-                          <tr>
-                            <th><h2>Usuarios</th>                           
+                          <tr>                        
                             <th><h2>Inicio</th>
                             <th><h2>Productos</th>
                             <th><h2>Nosotros</th>
@@ -51,8 +50,6 @@
                             <th><h2>Contacto</th>
                           </tr>
                           <tr>
-                            <td><a href = 'adminusuario.php'</a> 
-                            <img src='../img/usuario.png' alt='Usuarios'></td>
                             <td><a href = 'admininicio.php'</a> 
                             <img src='../img/inicioIndex.jpg' alt='Inicio'></td>
                             <td><a href = 'adminproductos.php'</a> 
