@@ -62,6 +62,7 @@ $lista = $consulta -> getContacto($sql);
                 echo("<td>". $contacto -> getFecha()."</td>");
                 echo("</tr>");
                 }?>
+                
            </table>
            <hr/> 
            </form>

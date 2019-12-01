@@ -1,3 +1,8 @@
-function update(){
-    alert("La información se actualizó con éxito");
+  function cambiarAItalica(element) {
+    element.style.fontStyle='italic';
 }
+
+  function changeANormal(element) {
+    element.style.fontStyle='normal';
+}
+

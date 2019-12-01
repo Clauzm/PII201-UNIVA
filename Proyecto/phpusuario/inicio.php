@@ -43,6 +43,7 @@ $inicio = $consulta -> getIndex($query);
         <article>
             <div><img style = "float:right; padding-right:130px" src="<?php echo($inicio -> getImagen());?>"></div>
             <p><?php echo($inicio -> getTexto());?></p>
+            <script>alert("Bienvenido a Café México")</script>
          <hr/> 
          </article> 
          <footer>

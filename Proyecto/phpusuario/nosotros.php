@@ -16,7 +16,7 @@ $nosotros = $consulta -> getNosotros($query);
     <title>Café México - Jalisco, México.</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="../CSS/nosotrostyle.css">
-    <script src='main.js'></script>
+    <script src="../js/myfunctions.js"></script>
   </head>
      <body> 
         <hr/>            
@@ -43,7 +43,7 @@ $nosotros = $consulta -> getNosotros($query);
         </div> 
         <article>
             <div><img style = "padding-left: 200px" src="<?php echo($nosotros -> getImagen());?>"></div>
-            <p><?php echo($nosotros -> getTexto());?></p>
+            <p onmouseover="cambiarAItalica(this)" onmouseout="changeANormal(this)"><?php echo($nosotros -> getTexto());?></p>
          </article> 
         <hr/> 
          <footer>

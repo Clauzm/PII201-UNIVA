@@ -17,6 +17,7 @@ $connection = mysqli_connect($server, $username, $password, $database);
     <title>Café México - Jalisco, México.</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="../CSS/fomulariocontacto.css">
+    <script src="../js/myfunctions.js"></script>
   </head>
      <body> 
         <hr/>            
@@ -59,7 +60,7 @@ $connection = mysqli_connect($server, $username, $password, $database);
                 <textarea name="comentario" id="" cols="70" rows="10" ></textarea>
             </div>
             <br> 
-            <div class="button"> 
+            <div class="button" > 
                 <input type="submit" name="insert" value="Enviar">
             </div>
         </form>
