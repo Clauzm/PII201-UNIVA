@@ -1,8 +1,10 @@
 Scripts: 
 1. PhpUsuario/Inicio: (alert) Script de bienvenida
 2. php/Productos: (alert) Script cuando se elimina, inserta o modifica alg�n producto
-3. php/Productos: window.open Abre la ventana en donde estoy trabajando
-4. php/Productos: document.write(document.lastModified) Pone la ultima fecha y hora de carga
-5. phpUsuario/Nosotros onmouseover y onmouseout, cambio de letra :)
+3. php/Productos: (window.open : SELF) Abre la ventana en donde estoy trabajando
+4. php/Productos: (document.write(document.lastModified)) Pone la ultima fecha y hora de carga
+5. phpUsuario/Nosotros (onmouseover) y (onmouseout), cambio de letra :)
+6. phpUsuario/Productos window.print(); imprimir Productos :)
+7. phpUsuario/Inicio compartir en Facebook :) (window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location))
 
 		

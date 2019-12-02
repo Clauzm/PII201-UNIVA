@@ -16,7 +16,7 @@ $connection = mysqli_connect($server, $username, $password, $database);
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Café México - Jalisco, México.</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="stylesheet" href="../CSS/tablestyles.css">
+    <link rel="stylesheet" href="../CSS/tablestyles.css">    
   </head>
      <body> 
         <hr/>            
@@ -80,6 +80,7 @@ $connection = mysqli_connect($server, $username, $password, $database);
             <td><?php echo $precioplatillos; ?></td>
     <?php } ?>
     </table>
+    <a href="javascript:window.print();">Imprimir Productos</a>
          <footer style="padding-top: 70px;">
             <hr/>
             <h5>2019 &COPY; Clauzm/Developer.</h5>

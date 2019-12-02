@@ -44,9 +44,10 @@ $inicio = $consulta -> getIndex($query);
             <div><img style = "float:right; padding-right:130px" src="<?php echo($inicio -> getImagen());?>"></div>
             <p><?php echo($inicio -> getTexto());?></p>
             <script>alert("Bienvenido a Café México")</script>
+            <a href="javascript:void(window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location)));">Compartir en Facebook</a>
          <hr/> 
          </article> 
-         <footer>
+         <footer>            
             <h5>2019 &COPY; Clauzm/Developer.</h5>
             <hr/> 
          </footer>
